@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: true
+  tasks:
+    - name: Get hub.foobar version
+      shell: "ansible-galaxy collection list | grep hub.foobar | awk '{print $2}'"
+      register: result
+
+    - name: Display hub.foobar version
+      debug:
+        msg: '{{ result }}'
