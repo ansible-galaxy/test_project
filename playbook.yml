@@ -2,10 +2,6 @@
 - hosts: localhost
   gather_facts: true
   tasks:
-    - name: Get hub.foobar version
-      shell: "ansible-galaxy collection list | grep hub.foobar | awk '{print $2}'"
-      register: result
-
-    - name: Display hub.foobar version
-      debug:
-        msg: '{{ result }}'
+    - name: Check version of hub.foobar
+      ansible.builtin.debug:
+        msg: "hub.foobar version {{ lookup('community.general.collection_version', 'hub.foobar') }}"

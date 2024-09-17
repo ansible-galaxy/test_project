@@ -1,3 +1,4 @@
 ---
 collections:
   - name: hub.foobar
+  - name: community.general
