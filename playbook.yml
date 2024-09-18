@@ -4,4 +4,4 @@
   tasks:
     - name: Check version of hub.foobar
       ansible.builtin.debug:
-        msg: "hub.foobar version {{ lookup('community.general.collection_version', 'hub.foobar') }}"
+        msg: "hub.foobar version: {{ lookup('hub.foobar.collection_version', 'hub.foobar') }}"
