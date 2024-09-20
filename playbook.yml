@@ -2,6 +2,6 @@
 - hosts: localhost
   gather_facts: true
   tasks:
-    - name: Check version of hub.foobar
+    - name: Check version of bmclaughlin.test_collection
       ansible.builtin.debug:
-        msg: "hub.foobar version: {{ lookup('hub.foobar.collection_version', 'hub.foobar') }}"
+        msg: "bmclaughlin.test_collection version: {{ lookup('bmclaughlin.test_collection.collection_version', 'bmclaughlin.test_collection') }}"
