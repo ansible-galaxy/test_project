@@ -1,3 +1,4 @@
 ---
 collections:
   - name: bmclaughlin.test_collection
+    version: 1.0.3
